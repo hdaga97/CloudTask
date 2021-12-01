@@ -10,5 +10,12 @@ services:
     volumes: 
       - "/root/csvserver/solution/inputFile:/csvserver/inputdata"
 
+  
 
+  prometheus:
+    image: prom/prometheus:v2.22.0
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
 
